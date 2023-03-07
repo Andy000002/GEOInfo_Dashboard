@@ -50,33 +50,33 @@ class Line_com extends React.Component {
     }))
   }
   //fake button
-  refreshdata() {
-    this.fakedata.year += 1;
-    this.AddData({ year: String(this.fakedata.year), value: Math.round(Math.random() * 100) })
-  }
+  // refreshdata() {
+  //   this.fakedata.year += 1;
+  //   this.AddData({ year: String(this.fakedata.year), value: Math.round(Math.random() * 100) })
+  // }
 
-  fetchdata() {
-    if (this.fakedata.auto == 0) {
-      this.fakedata.auto = 1
-      this.SI = setInterval(
-        () => {
-          this.fakedata.year += 1;
-          this.AddData({ year: String(this.fakedata.year), value: Math.round(Math.random() * 100) })
-        }, 1)
-    }
-    else {
-      clearInterval(this.SI)
-      this.fakedata.auto = 0
-    }
-  }
+  // fetchdata() {
+  //   if (this.fakedata.auto == 0) {
+  //     this.fakedata.auto = 1
+  //     this.SI = setInterval(
+  //       () => {
+  //         this.fakedata.year += 1;
+  //         this.AddData({ year: String(this.fakedata.year), value: Math.round(Math.random() * 100) })
+  //       }, 1)
+  //   }
+  //   else {
+  //     clearInterval(this.SI)
+  //     this.fakedata.auto = 0
+  //   }
+  // }
   //fakebutton
 
   render() {
     return (
-      <div className='Plot Line'>
+      <div className='Plot Line' style={this.props.style}>
         <Line {...this.state.config} />
-        <button onClick={this.refreshdata.bind(this)}>CLick to Refresh</button>
-        <button onClick={this.fetchdata.bind(this)}>Auto Refresh</button>
+        {/* <button onClick={this.refreshdata.bind(this)}>CLick to Refresh</button>
+        <button onClick={this.fetchdata.bind(this)}>Auto Refresh</button> */}
       </div>
     )
   }

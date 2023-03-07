@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Bar } from '@ant-design/plots';
 import './components.css'
-import FileUpload from './FileUpload';
+import JsonFileUpload from './JsonFileUpload';
+import Websocket_com from './Websocket_com'
 
 const data = [
   {
@@ -70,8 +71,9 @@ class Bar_com extends Component {
     return (
       <div>
         <div className='Plot Bar'><Bar {...this.state.config} /></div>
-        <FileUpload AddData={this.SetData} />
-        <button onClick={this.GetReq.bind(this)}> GET REQUEST </button>
+        {/* <JsonFileUpload AddData={this.SetData} /> */}
+        {/* <button onClick={this.GetReq.bind(this)}> GET REQUEST </button> */}
+        {/* <Websocket_com /> */}
       </div >
     )
   }

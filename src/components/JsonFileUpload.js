@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 
-class FileUpload extends Component {
+class JsonFileUpload extends Component {
     constructor(props) {
         super(props)
     }
@@ -19,4 +19,4 @@ class FileUpload extends Component {
         )
     }
 }
-export default FileUpload
+export default JsonFileUpload
