@@ -73,7 +73,7 @@ class Line_com extends React.Component {
 
   render() {
     return (
-      <div className='Plot Line' style={this.props.style}>
+      <div className='Plot Line components' style={this.props.style}>
         <Line {...this.state.config} />
         {/* <button onClick={this.refreshdata.bind(this)}>CLick to Refresh</button>
         <button onClick={this.fetchdata.bind(this)}>Auto Refresh</button> */}

@@ -9,3 +9,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
+
+.components {
+  margin: 15px;
+}
+
+button {
+  width: 80px;
+  margin:3px;
+}
